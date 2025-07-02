@@ -6,146 +6,64 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      text-align: center;
-      direction: rtl;
-      background-color: #f8f8f8;
-      color: #333;
-    }
-    header {
-      background-color: #c0392b;
-      color: #fff;
-      padding: 30px 0;
-    }
-    header h1 {
+      background: url('https://images.unsplash.com/photo-1588776814546-b53c19b21df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
       margin: 0;
+      padding: 0;
     }
-    section {
-      margin: 40px auto;
-      max-width: 600px;
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    .overlay {
+      background: rgba(255, 255, 255, 0.8);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
     }
-    footer {
-      margin-top: 40px;
-      padding: 20px 0;
-      background: #c0392b;
-      color: #fff;
-    }
-    a {
-      color: #c0392b;
-      text-decoration: none;
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <h1>Redz Clinic</h1>
-    <p>رعايتك صحتك مسؤوليتنا</p>
-  </header>
-
-  <section>
-    <h2>خدماتنا</h2>
-    <ul style="list-style: none; padding: 0;">
-      <li>✅ تقديم الرعاية الطبية</li>
-      <li>✅ التحويل الطبي السليم إلى المختص</li>
-      <li>✅ تنظيم خدمة الحجز عبر الإنترنت</li>
-      <li>✅ متابعات دورية واستشارات مجانية مبدئية</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>التواصل معنا</h2>
-    <p>📧 البريد الإلكتروني: <a href="mailto:medesssa@gmail.com">medesssa@gmail.com</a></p>
-    <p>📞 رقم التواصل: 0599500945</p>
-  </section>
-
-  <footer>
-    &copy; 2025 Redz Clinic. جميع الحقوق محفوظة.
-  </footer>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8" />
-  <title>Redz Clinic</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      direction: rtl;
-      text-align: center;
-      background: #f9f9f9;
-      padding: 20px;
-    }
-    header {
-      background: #b30000;
-      color: #fff;
-      padding: 20px;
+    h1 {
+      color: #333;
     }
     form {
       background: #fff;
       padding: 20px;
-      margin-top: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px #ccc;
-      max-width: 400px;
-      margin-left: auto;
-      margin-right: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 300px;
     }
     input, textarea {
       width: 100%;
       padding: 10px;
-      margin: 10px 0;
+      margin-top: 10px;
+      margin-bottom: 20px;
       border: 1px solid #ccc;
-      border-radius: 4px;
+      border-radius: 5px;
     }
     button {
-      background: #b30000;
+      background: #d9534f;
       color: #fff;
-      padding: 10px 20px;
       border: none;
-      border-radius: 4px;
+      padding: 10px 15px;
+      border-radius: 5px;
       cursor: pointer;
+      width: 100%;
     }
-    a.whatsapp {
-      display: inline-block;
-      margin-top: 20px;
-      background: #25D366;
-      color: #fff;
-      padding: 10px 20px;
-      border-radius: 4px;
-      text-decoration: none;
+    button:hover {
+      background: #c9302c;
     }
   </style>
 </head>
 <body>
-
-  <header>
+  <div class="overlay">
     <h1>Redz Clinic</h1>
-    <p>رعايتك صحتك مسؤوليتنا</p>
-  </header>
-
-  <section>
-    <h2>تسجيل المريض</h2>
+    <p>نموذج تسجيل المريض</p>
     <form action="https://formsubmit.co/medesssa@gmail.com" method="POST">
-      <input type="text" name="name" placeholder="الاسم الكامل" required>
+      <input type="text" name="name" placeholder="اسم المريض" required>
       <input type="email" name="email" placeholder="البريد الإلكتروني" required>
-      <input type="tel" name="phone" placeholder="رقم الجوال">
+      <input type="text" name="phone" placeholder="رقم الجوال" required>
       <textarea name="complaint" placeholder="الشكوى الرئيسية" rows="4" required></textarea>
+      <input type="hidden" name="_captcha" value="false">
       <button type="submit">إرسال</button>
     </form>
-  </section>
-
-  <section>
-    <h2>تواصل مباشر عبر واتساب</h2>
-    <a class="whatsapp" href="https://wa.me/0599500945" target="_blank">
-      📞 اضغط هنا للتواصل عبر واتساب
-    </a>
-  </section>
-
+  </div>
 </body>
 </html>
