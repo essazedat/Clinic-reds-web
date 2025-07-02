@@ -1,102 +1,69 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <title>عيادة Redz الطبية</title>
+  <title>Redz Clinic</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f9f9f9;
+      background: url('https://images.unsplash.com/photo-1588776814546-b53c19b21df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
       margin: 0;
       padding: 0;
-      direction: rtl;
     }
-    header {
-      background: #b30000;
-      color: #fff;
+    .overlay {
+      background: rgba(255, 255, 255, 0.8);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+    }
+    h1 {
+      color: #333;
+    }
+    form {
+      background: #fff;
       padding: 20px;
-      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 300px;
     }
-    section {
-      padding: 20px;
-      max-width: 800px;
-      margin: auto;
-    }
-    h1, h2 {
-      margin: 0 0 10px 0;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    ul li {
-      background: #eee;
-      margin: 5px 0;
-      padding: 10px;
-      border-radius: 4px;
-    }
-    footer {
-      background: #b30000;
-      color: #fff;
-      text-align: center;
-      padding: 10px;
-    }
-    form input, form textarea {
+    input, textarea {
       width: 100%;
       padding: 10px;
-      margin: 5px 0 15px 0;
+      margin-top: 10px;
+      margin-bottom: 20px;
       border: 1px solid #ccc;
-      border-radius: 4px;
+      border-radius: 5px;
     }
-    form button {
-      background: #b30000;
+    button {
+      background: #d9534f;
       color: #fff;
       border: none;
-      padding: 10px 20px;
+      padding: 10px 15px;
+      border-radius: 5px;
       cursor: pointer;
-      border-radius: 4px;
+      width: 100%;
+    }
+    button:hover {
+      background: #c9302c;
     }
   </style>
 </head>
 <body>
-
-  <header>
-    <h1>🏥 عيادة Redz الطبية</h1>
-    <p>نرعاكم بعناية واحترافية</p>
-  </header>
-
-  <section>
-    <h2>من نحن</h2>
-    <p>عيادة Redz تقدم خدمات الرعاية الطبية الشاملة مع التحويل الطبي السليم إلى الأطباء المختصين عند الحاجة.</p>
-
-    <h2>الخدمات المقدمة</h2>
-    <ul>
-      <li>الكشف الطبي العام</li>
-      <li>متابعة الأمراض المزمنة</li>
-      <li>التحويل للأطباء المختصين</li>
-      <li>الاستشارات الطبية</li>
-      <li>إصدار تقارير طبية</li>
-      <li>وصفات علاجية موثوقة</li>
-    </ul>
-
-    <h2>احجز موعدك</h2>
-    <form>
-      <label>الاسم الكامل</label>
-      <input type="text" placeholder="ادخل اسمك الكامل" required>
-      <label>البريد الإلكتروني</label>
-      <input type="email" placeholder="example@email.com" required>
-      <label>رقم الهاتف</label>
-      <input type="tel" placeholder="0599500945" required>
-      <label>ملاحظات</label>
-      <textarea placeholder="أخبرنا بمشكلتك الطبية"></textarea>
+  <div class="overlay">
+    <h1>Redz Clinic</h1>
+    <p>نموذج تسجيل المريض</p>
+    <form action="https://formsubmit.co/medesssa@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="اسم المريض" required>
+      <input type="email" name="email" placeholder="البريد الإلكتروني" required>
+      <input type="text" name="phone" placeholder="رقم الجوال" required>
+      <textarea name="complaint" placeholder="الشكوى الرئيسية" rows="4" required></textarea>
+      <input type="hidden" name="_captcha" value="false">
       <button type="submit">إرسال</button>
     </form>
-  </section>
-
-  <footer>
-    📧 medesssa@gmail.com | 📞 0599500945
-  </footer>
-
+  </div>
 </body>
 </html>
